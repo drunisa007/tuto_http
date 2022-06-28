@@ -7,13 +7,17 @@ import 'package:tuto_http/app/presentation/screens/post/profile_name_time_ago.da
 import 'package:tuto_http/app/presentation/widgets/post_single_bg.dart';
 import 'package:tuto_http/app/presentation/widgets/profile_image_design.dart';
 import 'package:timeago/timeago.dart' as timeago;
+import 'package:tuto_http/app/service/vos/post_vo.dart';
 
 class PostSingleDesign extends StatelessWidget {
-  const PostSingleDesign({Key? key}) : super(key: key);
+
+  final PostVo mPost;
+
+  const PostSingleDesign({Key? key, required this.mPost}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final time = timeago.format(DateTime.parse("2022-06-28T06:07:58.449Z"),
+    final time = timeago.format((mPost.publishDate),
         locale: 'en');
 
     return PostSingleBg(
@@ -25,15 +29,16 @@ class PostSingleDesign extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              const ProfileImageDesign(
+              ProfileImageDesign(
                 imageUrl:
-                    'https://cdn.pixabay.com/photo/2016/11/29/03/52/man-1867175_1280.jpg',
+                    mPost.owner.picture,
               ),
                SizedBox(
                 width: 8.w,
               ),
               ProfileNameTimeAgo(
                 time: time,
+                name: "${mPost.owner.firstName} ${mPost.owner.lastName}" ,
               )
             ],
           ),
@@ -45,7 +50,7 @@ class PostSingleDesign extends StatelessWidget {
           borderRadius: BorderRadius.circular(16),
           child: CachedNetworkImage(
             imageUrl:
-                'https://cdn.pixabay.com/photo/2016/11/22/19/25/man-1850181_1280.jpg',
+                mPost.image,
             fit: BoxFit.cover,
             width: double.infinity,
             height: 185.h,
@@ -55,7 +60,7 @@ class PostSingleDesign extends StatelessWidget {
           height: 8.w,
         ),
         Text(
-          'adventure.yuki frozen grass short-coated black do...',
+          mPost.text,
           style: TextStyle(
               color: Colors.black.withOpacity(0.4),
               fontSize: 14.sp,
@@ -64,7 +69,7 @@ class PostSingleDesign extends StatelessWidget {
          SizedBox(
           height: 8.w,
         ),
-        const PostLikeDesign(likeCount: 10),
+         PostLikeDesign(likeCount: mPost.likes),
           SizedBox(
           height: 4.w,
         ),

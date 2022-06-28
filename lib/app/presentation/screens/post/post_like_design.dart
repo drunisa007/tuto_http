@@ -12,14 +12,14 @@ class PostLikeDesign extends StatelessWidget {
           text: TextSpan(
               children: [
                 TextSpan(text: 'Likes',style: TextStyle(
-                  color: Theme.of(context).primaryColor,
+                  color: Colors.black,
                   fontSize: 12.sp,
                   fontWeight: FontWeight.w400
                 ))
               ],
               text: '$likeCount ',
               style:  TextStyle(
-                  color: Colors.black,
+                  color: Theme.of(context).primaryColor,
                   fontSize: 12.sp,
                   fontWeight: FontWeight.bold)),
         );

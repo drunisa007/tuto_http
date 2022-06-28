@@ -4,8 +4,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class ProfileNameTimeAgo extends StatelessWidget {
 
   final String time;
+  final String name;
 
-  const ProfileNameTimeAgo({Key? key, required this.time}) : super(key: key);
+  const ProfileNameTimeAgo({Key? key, required this.time,required this.name}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +15,7 @@ class ProfileNameTimeAgo extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children:  [
                    Text(
-                    'Aung Thu Katwal',
+                    name,
                     style: TextStyle(
                         color: Colors.black,
                         fontWeight: FontWeight.w800,
