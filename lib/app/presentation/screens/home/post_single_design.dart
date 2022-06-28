@@ -1,5 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:tuto_http/app/presentation/screens/home/post_like_design.dart';
 import 'package:tuto_http/app/presentation/screens/home/profile_name_time_ago.dart';
 import 'package:tuto_http/app/presentation/widgets/post_single_bg.dart';
 import 'package:tuto_http/app/presentation/widgets/profile_image_design.dart';
@@ -36,7 +38,7 @@ class PostSingleDesign extends StatelessWidget {
           ),
         ),
         const SizedBox(
-          height: 16,
+          height: 10,
         ),
         ClipRRect(
           borderRadius: BorderRadius.circular(16),
@@ -49,7 +51,7 @@ class PostSingleDesign extends StatelessWidget {
           ),
         ),
         const SizedBox(
-          height: 4,
+          height: 10,
         ),
         Text(
           'adventure.yuki frozen grass short-coated black do...',
@@ -59,22 +61,34 @@ class PostSingleDesign extends StatelessWidget {
               fontWeight: FontWeight.w500),
         ),
         const SizedBox(
-          height: 2,
+          height: 10,
         ),
-        RichText(
-          text: TextSpan(
-              children: [
-                TextSpan(text: 'Likes',style: TextStyle(
-                  color: Theme.of(context).primaryColor,
-                  fontSize: 12,
-                  fontWeight: FontWeight.w400
-                ))
-              ],
-              text: '13 ',
-              style: const TextStyle(
-                  color: Colors.black,
-                  fontSize: 12,
-                  fontWeight: FontWeight.bold)),
+        const PostLikeDesign(likeCount: 10),
+           const SizedBox(
+          height: 6,
+        ),
+        const Divider(),
+         const SizedBox(
+          height: 6,
+        ),
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: const [
+            FaIcon(
+              FontAwesomeIcons.heart,
+              size: 24,
+              color: Colors.black,
+            ),
+            SizedBox(
+              width: 16,
+            ),
+            FaIcon(
+              FontAwesomeIcons.comment,
+              size: 24,
+              color: Colors.black,
+            ),
+          ],
         )
       ]),
     );

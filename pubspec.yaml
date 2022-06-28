@@ -37,6 +37,7 @@ dependencies:
   get: ^4.6.5
   cached_network_image: ^3.2.1
   timeago: ^3.2.2
+  font_awesome_flutter: ^10.1.0
 
 dev_dependencies:
   flutter_test:
