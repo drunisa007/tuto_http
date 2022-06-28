@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:tuto_http/app/presentation/screens/home/post_like_design.dart';
 import 'package:tuto_http/app/presentation/screens/home/profile_name_time_ago.dart';
@@ -28,8 +29,8 @@ class PostSingleDesign extends StatelessWidget {
                 imageUrl:
                     'https://cdn.pixabay.com/photo/2016/11/29/03/52/man-1867175_1280.jpg',
               ),
-              const SizedBox(
-                width: 8,
+               SizedBox(
+                width: 8.w,
               ),
               ProfileNameTimeAgo(
                 time: time,
@@ -37,8 +38,8 @@ class PostSingleDesign extends StatelessWidget {
             ],
           ),
         ),
-        const SizedBox(
-          height: 10,
+         SizedBox(
+          height: 8.w,
         ),
         ClipRRect(
           borderRadius: BorderRadius.circular(16),
@@ -47,45 +48,45 @@ class PostSingleDesign extends StatelessWidget {
                 'https://cdn.pixabay.com/photo/2016/11/22/19/25/man-1850181_1280.jpg',
             fit: BoxFit.cover,
             width: double.infinity,
-            height: 185,
+            height: 185.h,
           ),
         ),
-        const SizedBox(
-          height: 10,
+         SizedBox(
+          height: 8.w,
         ),
         Text(
           'adventure.yuki frozen grass short-coated black do...',
           style: TextStyle(
               color: Colors.black.withOpacity(0.4),
-              fontSize: 14,
+              fontSize: 14.sp,
               fontWeight: FontWeight.w500),
         ),
-        const SizedBox(
-          height: 10,
+         SizedBox(
+          height: 8.w,
         ),
         const PostLikeDesign(likeCount: 10),
-           const SizedBox(
-          height: 6,
+          SizedBox(
+          height: 4.w,
         ),
         const Divider(),
-         const SizedBox(
-          height: 6,
+          SizedBox(
+          height: 4.w,
         ),
         Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.start,
-          children: const [
+          children:  [
             FaIcon(
               FontAwesomeIcons.heart,
-              size: 24,
+              size: 24.sp,
               color: Colors.black,
             ),
             SizedBox(
-              width: 16,
+              width: 16.w,
             ),
             FaIcon(
               FontAwesomeIcons.comment,
-              size: 24,
+              size: 24.sp,
               color: Colors.black,
             ),
           ],

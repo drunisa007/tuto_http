@@ -1,6 +1,7 @@
 
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ProfileImageDesign extends StatelessWidget {
 
@@ -10,19 +11,19 @@ class ProfileImageDesign extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-                width: 50,
-                height: 50,
+                width: 48.w,
+                height: 48.w,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(16),
+                  borderRadius: BorderRadius.circular(16.w),
                   border: Border.all(
-                      width: 1, color: Theme.of(context).primaryColor),
+                      width: 1.w, color: Theme.of(context).primaryColor),
                 ),
                 child: Container(
-                width: 45,
-                height: 45,
-                margin: const EdgeInsets.all(1.3),
+                width: 42.w,
+                height: 42.w,
+                margin: EdgeInsets.all(1.3.w),
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(16),
+                  borderRadius: BorderRadius.circular(16.w),
                   image: DecorationImage(
                     image: CachedNetworkImageProvider(
                       imageUrl,

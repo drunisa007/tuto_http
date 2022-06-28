@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ProfileNameTimeAgo extends StatelessWidget {
 
@@ -12,19 +13,19 @@ class ProfileNameTimeAgo extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children:  [
-                  const Text(
+                   Text(
                     'Aung Thu Katwal',
                     style: TextStyle(
                         color: Colors.black,
                         fontWeight: FontWeight.w800,
-                        fontSize: 14),
+                        fontSize: 12.sp),
                   ),
                   Text(
                     time,
-                    style: const TextStyle(
+                    style:  TextStyle(
                         color: Colors.grey,
                         fontWeight: FontWeight.w400,
-                        fontSize: 12),
+                        fontSize: 10.sp),
                   )
                 ],
               );

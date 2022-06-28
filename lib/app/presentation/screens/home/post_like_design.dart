@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class PostLikeDesign extends StatelessWidget {
   final int likeCount;
@@ -12,14 +13,14 @@ class PostLikeDesign extends StatelessWidget {
               children: [
                 TextSpan(text: 'Likes',style: TextStyle(
                   color: Theme.of(context).primaryColor,
-                  fontSize: 12,
+                  fontSize: 12.sp,
                   fontWeight: FontWeight.w400
                 ))
               ],
               text: '$likeCount ',
-              style: const TextStyle(
+              style:  TextStyle(
                   color: Colors.black,
-                  fontSize: 12,
+                  fontSize: 12.sp,
                   fontWeight: FontWeight.bold)),
         );
   }

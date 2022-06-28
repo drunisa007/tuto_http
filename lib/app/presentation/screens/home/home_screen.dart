@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tuto_http/app/presentation/screens/home/post_single_design.dart';
 import 'package:tuto_http/app/service/app_data/data/constant_post.dart';
 import 'package:tuto_http/app/service/vos/post_vo.dart';
@@ -11,9 +12,9 @@ class HomeScreen extends StatelessWidget {
     List<PostVo> mPostList = ConstantPost().getAllPost();
 
     return ListView.builder(
-      padding: const EdgeInsets.symmetric(
-        vertical: 10,
-        horizontal: 40,
+      padding:  EdgeInsets.symmetric(
+        vertical: 10.w,
+        horizontal: 30.w,
       ),
       itemBuilder: ((context, index) {
         return const PostSingleDesign();
