@@ -1,8 +1,8 @@
 import 'package:tuto_http/app/service/vos/post_vo.dart';
 
 class ConstantPost {
-  Future<List<PostVo>> getAllPost() async {
-    await Future.delayed(const Duration(seconds: 1));
+   getAllPost()  {
+    //await Future.delayed(const Duration(seconds: 1));
 
     List<PostVo> dummyPostList = [
       PostVo(

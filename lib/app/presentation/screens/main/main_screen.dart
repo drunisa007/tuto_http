@@ -19,6 +19,7 @@ class MainScreen extends StatelessWidget {
         title: const Text('Home'),
         centerTitle: true,
       ),
+      backgroundColor: Colors.white,
       body: Obx(() {
         return IndexedStack(
           index: mMainController.bottomNavIndex.value,
