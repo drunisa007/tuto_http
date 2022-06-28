@@ -14,6 +14,8 @@ class MyApp extends StatelessWidget {
     return  GetMaterialApp(
       title: 'HTTP APP',
       initialRoute: AppNames.mainScreen,
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(useMaterial3: true,scaffoldBackgroundColor: Color(0xffF9F9F9)),
       getPages: App.screens,
     );
   }
