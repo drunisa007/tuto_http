@@ -14,7 +14,8 @@ class PostSingleDesign extends StatelessWidget {
         locale: 'en');
 
     return PostSingleBg(
-      customChild: Column(children: [
+      customChild:
+          Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         SizedBox(
           width: double.infinity,
           child: Row(
@@ -34,16 +35,46 @@ class PostSingleDesign extends StatelessWidget {
             ],
           ),
         ),
-        const SizedBox(height: 16,),
+        const SizedBox(
+          height: 16,
+        ),
         ClipRRect(
           borderRadius: BorderRadius.circular(16),
           child: CachedNetworkImage(
-          imageUrl:
-              'https://cdn.pixabay.com/photo/2016/11/22/19/25/man-1850181_1280.jpg',
-              fit: BoxFit.cover,
-              width: double.infinity,
-              height: 185,
+            imageUrl:
+                'https://cdn.pixabay.com/photo/2016/11/22/19/25/man-1850181_1280.jpg',
+            fit: BoxFit.cover,
+            width: double.infinity,
+            height: 185,
+          ),
         ),
+        const SizedBox(
+          height: 4,
+        ),
+        Text(
+          'adventure.yuki frozen grass short-coated black do...',
+          style: TextStyle(
+              color: Colors.black.withOpacity(0.4),
+              fontSize: 14,
+              fontWeight: FontWeight.w500),
+        ),
+        const SizedBox(
+          height: 2,
+        ),
+        RichText(
+          text: TextSpan(
+              children: [
+                TextSpan(text: 'Likes',style: TextStyle(
+                  color: Theme.of(context).primaryColor,
+                  fontSize: 12,
+                  fontWeight: FontWeight.w400
+                ))
+              ],
+              text: '13 ',
+              style: const TextStyle(
+                  color: Colors.black,
+                  fontSize: 12,
+                  fontWeight: FontWeight.bold)),
         )
       ]),
     );
