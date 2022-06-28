@@ -1,9 +1,8 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:tuto_http/app/presentation/screens/account/account_screen.dart';
-import 'package:tuto_http/app/presentation/screens/home/home_screen.dart';
+import 'package:tuto_http/app/presentation/screens/post/post_screen.dart';
 import 'package:tuto_http/app/presentation/screens/main/main_bottom_nav.dart';
 import 'package:tuto_http/app/view_model/controllers/main_controller.dart';
 
@@ -24,7 +23,7 @@ class MainScreen extends StatelessWidget {
         return IndexedStack(
           index: mMainController.bottomNavIndex.value,
           children: const [
-            HomeScreen(),
+            PostScreen(),
             AccountScreen(),
           ],
         );
