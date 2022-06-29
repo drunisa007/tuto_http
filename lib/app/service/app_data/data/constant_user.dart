@@ -59,5 +59,7 @@ class ConstantUser {
           picture: "https://randomuser.me/api/portraits/med/women/85.jpg"),
 
     ];
+
+    return dummyUserList;
   }
 }
